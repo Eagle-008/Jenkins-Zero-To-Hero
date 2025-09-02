@@ -3,20 +3,15 @@ pipeline {
         docker { image 'openjdk:17' }
     }
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/Eagle-008/Jenkins-Zero-To-Hero.git', branch: 'main'
-            }
-        }
         stage('Build') {
             steps {
                 sh 'ls -l'  // debug
-                sh 'javac helloworld.java'
+                sh 'javac HelloWorld.java'
             }
         }
         stage('Run') {
             steps {
-                sh 'java helloworld'
+                sh 'java HelloWorld'
             }
         }
     }
