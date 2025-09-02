@@ -12,14 +12,14 @@ pipeline {
             steps {
                 dir('my-first-pipeline') {
                     sh 'ls -l'
-                    sh 'javac helloworld.java'
+                    sh 'javac HelloWorld.java'
                 }
             }
         }
         stage('Run') {
             steps {
                 dir('my-first-pipeline') {
-                    sh 'java helloworld'
+                    sh 'java HelloWorld'
                 }
             }
         }
